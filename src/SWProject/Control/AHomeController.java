@@ -1,5 +1,6 @@
 package SWProject.Control;
 
+import SWProject.Model.Brand;
 import SWProject.Model.OnSiteStore;
 import SWProject.Model.Store;
 import javafx.fxml.FXML;
@@ -57,9 +58,14 @@ public class AHomeController  extends SharedController implements Initializable
     @FXML
     private Button suggestion;
 
-
     @FXML
     private Button provideVoucherCard;
+
+    @FXML
+    private Button addBrand;
+
+    @FXML
+    private TextField brandName;
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -153,6 +159,18 @@ public class AHomeController  extends SharedController implements Initializable
                     }
                 }
             }
+        });
+
+        addBrand.setOnAction(e->{
+            if(brandName.getText().isEmpty())
+                brandName.getStyleClass().add("error");
+            else
+            {
+                Brand brand=new Brand();
+                brand.setName(brandName.getText());
+                sharedAdmin.addBrand(brand);
+            }
+
         });
 
     }

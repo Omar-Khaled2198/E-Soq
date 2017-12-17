@@ -290,19 +290,21 @@ public class Database
         fileOutputStream=new FileOutputStream(file);
         ObjectOutputStream objectOutputStream=new ObjectOutputStream(fileOutputStream);
         if(path.equals("Products"))
-            objectOutputStream.writeObject(database.products);
+            objectOutputStream.writeObject(products);
         if(path.equals("Stores"))
-            objectOutputStream.writeObject(database.stores);
+            objectOutputStream.writeObject(stores);
         if(path.equals("Users"))
-            objectOutputStream.writeObject(database.users);
+            objectOutputStream.writeObject(users);
         if(path.equals("Carts"))
-            objectOutputStream.writeObject(database.shoppingCarts);
+            objectOutputStream.writeObject(shoppingCarts);
         if(path.equals("Transactions"))
-            objectOutputStream.writeObject(database.transactions);
+            objectOutputStream.writeObject(transactions);
         if(path.equals("Vouchers"))
-            objectOutputStream.writeObject(database.voucherCards);
+            objectOutputStream.writeObject(voucherCards);
         if(path.equals("Suggests"))
-            objectOutputStream.writeObject(database.suggests);
+            objectOutputStream.writeObject(suggests);
+        if(path.equals("Brands"))
+            objectOutputStream.writeObject(brands);
         objectOutputStream.flush();
         objectOutputStream.close();
         fileOutputStream.close();
@@ -314,19 +316,21 @@ public class Database
             FileInputStream fileInputStream = new FileInputStream(file);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             if (path.equals("Products"))
-                database.products = (ArrayList<Product>) objectInputStream.readObject();
+                products = (ArrayList<Product>) objectInputStream.readObject();
             if (path.equals("Users"))
-                database.users = (ArrayList<User>) objectInputStream.readObject();
+                users = (ArrayList<User>) objectInputStream.readObject();
             if (path.equals("Stores"))
-                database.stores = (ArrayList<Store>) objectInputStream.readObject();
+                stores = (ArrayList<Store>) objectInputStream.readObject();
             if (path.equals("Carts"))
-                database.shoppingCarts = (ArrayList<ShoppingCart>) objectInputStream.readObject();
+                shoppingCarts = (ArrayList<ShoppingCart>) objectInputStream.readObject();
             if (path.equals("Transactions"))
-                database.transactions = (ArrayList<Transaction>) objectInputStream.readObject();
+                transactions = (ArrayList<Transaction>) objectInputStream.readObject();
             if (path.equals("Vouchers"))
-                database.voucherCards = (ArrayList<VoucherCard>) objectInputStream.readObject();
+                voucherCards = (ArrayList<VoucherCard>) objectInputStream.readObject();
             if(path.equals("Suggests"))
-                database.suggests=(ArrayList<Suggest>)objectInputStream.readObject();
+                suggests=(ArrayList<Suggest>)objectInputStream.readObject();
+            if(path.equals("Brands"))
+                brands=(ArrayList<Brand>)objectInputStream.readObject();
             objectInputStream.close();
             fileInputStream.close();
         }
@@ -342,8 +346,21 @@ public class Database
         return brands;
     }
 
-    public void setBrands(ArrayList<Brand> brands) {
-        this.brands = brands;
+    public void addBrand(Brand brand) {
+        brands.add(brand);
+        try {
+            write("Brands");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Brand loadBrand(String brandName)
+    {
+        for(int i=0;i<brands.size();i++)
+            if(brands.get(i).getName().equals(brandName))
+                return brands.get(i);
+        return null;
     }
 
 }
