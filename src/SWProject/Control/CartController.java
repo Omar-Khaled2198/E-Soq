@@ -96,7 +96,8 @@ public class CartController extends SharedController implements Initializable
                 paymentType.getStyleClass().add("error");
             else
             {
-                if(database.loadProduct(Integer.valueOf(productID.getText()))==null)
+                if(database.loadProduct(Integer.valueOf(productID.getText()))==null||
+                        sharedshoppingCart.getItem(Integer.valueOf(productID.getText()))==null)
                 {
                     displayPopUp("Product doesn't Exists");
                 }
