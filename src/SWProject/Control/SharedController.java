@@ -23,15 +23,9 @@ public class SharedController
       database.read("Stores");
       database.read("Carts");
       database.read("Transactions");
-      /*
-      User user=new Admin();
-      user.userID="amr";
-      user.password="3";
-      user.email="amr@gmail.com";
-      user.userName="Amr Alaa";
-      user.gender="Male";
-      user.age=22;
-      database.addUser(user);*/
+      database.read("Brands");
+      database.read("Suggests");
+      database.read("Vouchers");
    }
 
 }

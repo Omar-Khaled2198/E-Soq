@@ -358,7 +358,7 @@ public class Database
     public Brand loadBrand(String brandName)
     {
         for(int i=0;i<brands.size();i++)
-            if(brands.get(i).getName().equals(brandName))
+            if(brands.get(i).getName().toLowerCase().equals(brandName.toLowerCase()))
                 return brands.get(i);
         return null;
     }
