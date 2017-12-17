@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="stage" prefHeight="411.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="email" layoutX="243.0" layoutY="160.0" />
+      <TextField fx:id="age" layoutX="243.0" layoutY="206.0" />
+      <Text layoutX="138.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name: " />
+      <Text layoutX="138.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age: " />
+      <ChoiceBox fx:id="gender" layoutX="243.0" layoutY="255.0" prefHeight="26.0" prefWidth="171.0" />
+      <Text layoutX="135.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender: " />
+      <TextField fx:id="userName" layoutX="243.0" layoutY="61.0" />
+      <Text layoutX="134.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" />
+      <Button fx:id="save" layoutX="215.0" layoutY="325.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="140.0" text="Save" />
+      <PasswordField fx:id="password" layoutX="243.0" layoutY="116.0" />
+      <Text layoutX="136.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password: " />
+      <Text fx:id="error" layoutX="422.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.99999678134918" />
+   </children>
+</AnchorPane>

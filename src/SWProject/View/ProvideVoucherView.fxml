@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="stage" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea fx:id="show" editable="false" layoutX="25.0" layoutY="23.0" prefHeight="196.0" prefWidth="554.0" />
+      <TextField fx:id="userID" layoutX="33.0" layoutY="238.0" promptText="User ID" />
+      <TextField fx:id="voucherValue" layoutX="33.0" layoutY="289.0" promptText="Voucher Card Value" />
+      <Button fx:id="addVoucherCard" layoutX="214.0" layoutY="334.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="163.0" text="Provide" />
+   </children>
+</AnchorPane>

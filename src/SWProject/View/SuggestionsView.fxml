@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="stage" prefHeight="389.0" prefWidth="503.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea fx:id="suggestion" editable="false" layoutX="29.0" layoutY="26.0" prefHeight="335.0" prefWidth="437.0" />
+   </children>
+</AnchorPane>

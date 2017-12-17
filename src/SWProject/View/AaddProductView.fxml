@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="363.0" prefWidth="321.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="productName" layoutX="75.0" layoutY="51.0" promptText="Product Name" />
+      <TextField fx:id="productBrand" layoutX="75.0" layoutY="94.0" promptText="Product Brand" />
+      <TextField fx:id="productQuantity" layoutX="75.0" layoutY="136.0" promptText="Product Quantity" />
+      <TextField fx:id="productPrice" layoutX="75.0" layoutY="182.0" promptText="Product Price" />
+      <Button fx:id="addProduct" layoutX="75.0" layoutY="238.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="171.0" text="Add Product" />
+   </children>
+</AnchorPane>
